@@ -12,7 +12,7 @@ public class Interface {
             System.out.println("Estado actual del tablero:");
             
             //Este es el sistema de coordenadas del tablero
-            String tablero = juego.obtenerEstadoTablero();
+            String tablero = juego.obtenerTablero();
             String[] filas = tablero.split("\n");
             System.out.print("\033[35m  ");
             for (int i = 0; i < filas[0].split(" ").length; i++) {

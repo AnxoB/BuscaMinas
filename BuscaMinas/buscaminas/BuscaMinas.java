@@ -123,7 +123,7 @@ public class BuscaMinas {
      * Método que devuelve el estado actual del tablero
      * @return
      */
-    public String obtenerEstadoTablero() {
+    public String obtenerTablero() {
         StringBuilder sb = new StringBuilder();
     
         for (int i = 0; i < tablero.length; i++) {
