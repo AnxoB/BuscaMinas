@@ -1,6 +1,6 @@
 package principal;
 
-import buscaminas.BuscaMinas;
+import BuscaMinas.BuscaMinas;
 import java.util.Scanner;
 
 public class Interface {

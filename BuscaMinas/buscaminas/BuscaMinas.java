@@ -1,4 +1,4 @@
-package buscaminas;
+package BuscaMinas;
 
 import java.util.Random;
 
