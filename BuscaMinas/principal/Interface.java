@@ -50,7 +50,7 @@ public class Interface {
                 System.out.println("Acción no reconocida. Por favor, introduce '1' o '2'.");
                 continue;
             }
-        
+
             if (juego.hasGanado()) {
                 System.out.println("¡Felicidades! Has desbloqueado todo el tablero. Fin del juego.");
                 break;

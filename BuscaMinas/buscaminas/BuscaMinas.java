@@ -8,7 +8,12 @@ public class BuscaMinas {
     private int minas;
     boolean[][] banderas;
 
-    //Constructor del juego que inicializa el tablero, las casillas descubiertas, las banderas y las minas
+    /**
+     * Constructor de la clase BuscaMinas
+     * @param filas
+     * @param columnas
+     * @param minas
+     */
     public BuscaMinas(int filas, int columnas, int minas) {
         this.tablero = new int[filas][columnas];
         this.casillasDescubiertas = new boolean[filas][columnas];
@@ -17,7 +22,7 @@ public class BuscaMinas {
         colocarMinasAleatorias();
     }
 
-    //Método que coloca las minas aleatoriamente en el tablero
+    // Método que coloca las minas aleatoriamente en el tablero
     private void colocarMinasAleatorias() {
         Random random = new Random();
         int minasColocadas = 0;
@@ -36,12 +41,21 @@ public class BuscaMinas {
         }
     }
     
-    //Método que marca o desmarca una bandera en una casilla
+    /**
+     * Método que marca o desmarca una bandera en una casilla
+     * @param i
+     * @param j
+     */
     public void marcarBanderas(int i, int j) {
         banderas[i][j] = !banderas[i][j];
     }
 
-    //Método que descubre una casilla
+    /**
+     * Método que descubre una casilla
+     * @param fila
+     * @param columna
+     * @return
+     */
     public boolean descubrirCasilla(int fila, int columna) {
 
         // Si la casilla está marcada con una bandera o ya ha sido descubierta, return false
@@ -88,7 +102,10 @@ public class BuscaMinas {
         return false;
     }
 
-    // Método para comprobar si el jugador ha ganado
+    /**
+     * Método que comprueba si el jugador ha ganado
+     * @return
+     */
     public boolean hasGanado() {
 
         // Si todas las casillas que no tienen una mina han sido descubiertas, el jugador ha ganado
@@ -102,7 +119,10 @@ public class BuscaMinas {
         return true;
     }
 
-    // Método para obtener el estado actual del tablero
+    /**
+     * Método que devuelve el estado actual del tablero
+     * @return
+     */
     public String obtenerEstadoTablero() {
         StringBuilder sb = new StringBuilder();
     
@@ -135,7 +155,10 @@ public class BuscaMinas {
         return sb.toString();
     }
 
-    // Método para comprobar si el juego ha terminado
+    /**
+     * Método que comprueba si el juego ha terminado
+     * @return
+     */
     public boolean juegoTerminado() {
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero[0].length; j++) {
